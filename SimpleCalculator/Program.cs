@@ -74,31 +74,26 @@ namespace SimpleCalculator
                 while (!checkNumber);
 
                 // Performing math operations
-                if (enteredOperator == mathOperator[0])
+                switch (enteredOperator)
                 {
-                    result = firstNumber + secondNumber;
-                }
-
-                else if (enteredOperator == mathOperator[1])
-                {
-                    result = firstNumber - secondNumber;
-                }
-
-                else if (enteredOperator == mathOperator[2])
-                {
-                    result = firstNumber * secondNumber;
-                }
-
-                else if (enteredOperator == mathOperator[3])
-                {
-                    result = firstNumber / secondNumber;
+                    case "+":
+                        result = firstNumber + secondNumber;
+                        break;
+                    case "-":
+                        result = firstNumber - secondNumber;
+                        break;
+                    case "*":
+                        result = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        result = firstNumber / secondNumber;
+                        break;
                 }
 
                 // Printing result
                 Console.WriteLine("");
                 Console.WriteLine($"Result: {firstNumber} {enteredOperator} {secondNumber} = {result}");
                 Console.WriteLine("");
-
             }
 
         }
